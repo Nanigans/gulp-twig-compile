@@ -3,7 +3,6 @@ var should = require('should');
 var path = require('path');
 var gutil = require('gulp-util');
 var sinon = require('sinon');
-var SandboxedModule = require('sandboxed-module');
 var proxyquire = require('proxyquire');
 var Twig = require('twig');
 var twig_compile = require('./');
