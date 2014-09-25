@@ -31,14 +31,12 @@ gulp.task('twig', function() {
 
 The options object supports the `module` and `twig` options for the [Twig compiler](https://github.com/justjohn/twig.js/wiki/Compiling-Templates).
 
-
- * `module`
+ * `module`  
    Should the output be written in module format. Supported formats:
      * node:  Node.js / CommonJS 1.1 modules
      * amd:   RequireJS / Asynchronous modules (requires `twig`)
      * cjs2:  CommonJS 2.0 draft8 modules (requires `twig`)
-
- * `twig`
+ * `twig`  
    Used with module. The location relative to the output directory of twig.js. (used for module dependency resolution).
 
 ```javascript
@@ -46,7 +44,7 @@ var twig_compile = require('gulp-twig-compile');
 
 gulp.task('twig', function() {
   gulp.src('./src/**/*.twig')
-    .pipe(twig_compile({module: 'amd', twig: 'lib\twig'}))
+    .pipe(twig_compile({module: 'amd', twig: 'lib/twig'}))
     .pipe(gulp.dest('./dest/'))
 });
 ```
