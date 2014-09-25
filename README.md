@@ -6,13 +6,20 @@ gulp-twig-compile
 ## Information
 
 <table>
+<tr> 
+<td>Package</td><td>gulp-twig-compile</td>
+</tr>
 <tr>
+<td>Description</td>
+<td>Compiles Twig Templates to Javascript using [Twig.js](https://github.com/justjohn/twig.js)</td>
+</tr>
+<tr>
+<td>Node Version</td>
+<td>>= 0.9</td>
+</tr>
+</table>
 
-| Package | gulp-twig-compile |
-|:--------|:------------------|
-| Description | Compiles Twig Templates to Javascript using [Twig.js](https://github.com/justjohn/twig.js) |
-| Node Version | >= 0.9 |
-
+## Installation
 
 ## Usage
 
