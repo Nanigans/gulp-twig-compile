@@ -1,8 +1,7 @@
 gulp-twig-compile
 =================
 
-![Build Status](https://travis-ci.org/Nanigans/gulp-twig-compile.png?branch=master)](https://travis-ci.org/Nanigans/gulp-twig-compile)
-![status](https://secure.travis-ci.org/Nanigans/gulp-coffee.png?branch=master)
+[![Build Status](https://travis-ci.org/Nanigans/gulp-twig-compile.png?branch=master)](https://travis-ci.org/Nanigans/gulp-twig-compile)
 
 ## Information
 
