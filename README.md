@@ -7,7 +7,9 @@ gulp-twig-compile
 
 <table>
 <tr>
+
 | Package | gulp-twig-compile |
+|:--------|:------------------|
 | Description | Compiles Twig Templates to Javascript using [Twig.js](https://github.com/justjohn/twig.js) |
 | Node Version | >= 0.9 |
 
