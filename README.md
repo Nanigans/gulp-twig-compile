@@ -2,6 +2,10 @@ gulp-twig-compile
 =================
 
 [![Build Status](https://travis-ci.org/Nanigans/gulp-twig-compile.png?branch=master)](https://travis-ci.org/Nanigans/gulp-twig-compile)
+[![dependencies](https://david-dm.org/Nanigans/gulp-twig-compile.png)](https://david-dm.org/Nanigans/gulp-twig-compile)
+
+
+[![NPM info](https://nodei.co/npm/gulp-twig-compile.png?downloads=true)](https://nodei.co/npm/gulp-twig-compile.png?downloads=true)
 
 ## Information
 
@@ -20,6 +24,10 @@ gulp-twig-compile
 </table>
 
 ## Installation
+
+```sh
+npm install --save gulp-twig-compile
+```
 
 ## Usage
 
