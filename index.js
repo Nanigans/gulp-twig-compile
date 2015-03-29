@@ -1,7 +1,14 @@
 var through = require('through2');
-var twig = require('twig').twig;
+var twigModule = require('twig');
+var twig = twigModule.twig;
 var gutil = require('gulp-util');
 var merge = require('merge');
+
+var deleteTemplateById = function(id) {
+  twigModule.extend(function(Twig) {
+    delete Twig.Templates.registry[id];
+  });
+};
 
 var PluginError = gutil.PluginError;
 
@@ -15,6 +22,8 @@ module.exports = function (opt) {
     }, opt);
     var data;
     try {
+      // remove the template from registry if exists, to allow watch and rewrite with the same id
+      deleteTemplateById(file.relative);
       var template = twig({id: file.relative, data: file.contents.toString('utf8')});
       data = template.compile(options);
     } catch (err) {
