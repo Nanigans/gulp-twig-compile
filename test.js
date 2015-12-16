@@ -97,6 +97,25 @@ describe('gulp-twig-compile', function() {
     Twig.twig.restore();
   });
 
+  it('should convert backslashes to forward slashes for the template id', function(done) {
+    var compile = twig_compile({module: 'amd'});
+
+    compile.on('data', function (file) {
+      file.relative.should.equal('views\\template.twig.js');
+
+      file.contents.toString('utf8').indexOf('id:"views/template.twig"').should.be.above(-1);
+
+      done();
+    });
+
+    var cwd = process.cwd().replace('/\/g', '\\');
+    compile.write(new gutil.File({
+      path: path.join(cwd, 'views\\template.twig').replace('/\/g', '\\'),
+      cwd: cwd,
+      contents: new Buffer('Twig template contents')
+    }));
+  });
+
   it('should emit errors correctly', function(done) {
     var template_stub = {};
     template_stub.compile = function(opt) { throw "FAIL!"};
