@@ -15,7 +15,7 @@ module.exports = function (opt) {
     }, opt);
     var data;
     try {
-      var template = twig({id: file.relative, data: file.contents.toString('utf8')});
+      var template = twig({id: file.relative.replace(/\\/g, '/'), data: file.contents.toString('utf8')});
       data = template.compile(options);
     } catch (err) {
       return cb(new PluginError('gulp-twig-compile', err));
